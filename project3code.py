@@ -8,8 +8,8 @@ logfile = response.read().decode('utf-8').split('\n')
 
 #will have count by day for week/month
 count_dict = {}
-4xx_error = 0
-3xx_error = 0
+Fourxx_error = 0
+Threexx_error = 0
 # count for unique request file
 request_file = {}
 # saves last actual month
