@@ -64,3 +64,34 @@ for log in httpfile:
       requestfile[log[6]] += 1
     else:
       requstfile[log[6]]= 1
+    
+    
+print("Total Requests Made:",total)
+print()
+
+for month in sorted(count_dic):
+  for week in sorted(count_dic[month]):
+    for day in sorted(count_dic[month][week]):
+      print("Month: ", month, "day: ", day, "-", count_dic[month][week][day])
+print()
+
+for month in sorted(count_dic):
+  for week in sorted(count_dic[month]):
+    print("Week: ", week, '-', sum(count_dic[month][week].values()))
+print()
+
+for month in sorted(count_dic):
+  monthsum = 0
+  for week in sorted(count_dic[month]):
+    monthsum += sum(count_dic[month][week].values()))
+print()
+
+print("Percentage of 4xx status codes: ", round(Fourxx_error*100/total, 2), '%')
+print()
+print("Percentage of 3xx status codes: ", round(Threexx_error*100/total, 2), '%')
+print()
+mostrequested = sorted(requestfile.items(), key=lambda x: x[1], reverse = True)[0][0])
+leastrequested = sorted(requestfile.items(), key=lambda x: x[1])[0][0]
+
+print("Most requested file: ", mostrequested)
+print("Least requested file: ", leastrequested)
