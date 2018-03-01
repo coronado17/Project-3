@@ -84,6 +84,7 @@ for month in sorted(count_dic):
   monthsum = 0
   for week in sorted(count_dic[month]):
     monthsum += sum(count_dic[month][week].values()
+  print("Month: ", month, '-', monthsum)
 print()
 
 print("Percentage of 4xx status codes: ", round(Fourxx_error*100/total, 2), '%')
