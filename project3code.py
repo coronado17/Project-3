@@ -23,7 +23,7 @@ for log in httpfile:
     if len(log) == 10:
       total += 1
     #parse date using strptime()method
-    date = time.strptime(log[3][1:]), '%d/%b/%Y:%H:%M:%S')
+    date = time.strptime(log[3][1:], '%d/%b/%Y:%H:%M:%S')
     #number of week
     week = int(time.strftime("%U", date))
     
